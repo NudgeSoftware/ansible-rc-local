@@ -3,7 +3,7 @@
 - name: update init script
   template:
     src: etc/rc.local.j2
-    dest: /etc/rc.local
+    dest: /etc/rc.d/rc.local
     owner: root
     group: root
     mode: 0755
@@ -16,7 +16,7 @@
 
 - name: enable service
   service:
-    name: rc.local
+    name: rc-local
     enabled: true
   when: ansible_service_mgr == 'systemd'
   tags:

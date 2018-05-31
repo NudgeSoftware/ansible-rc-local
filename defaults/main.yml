@@ -1,3 +1,4 @@
 # defaults file for rc-local
 ---
 rc_local_commands: []
+rc_logpath: /var/log/rc.local.log
